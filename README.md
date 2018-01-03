@@ -20,5 +20,8 @@ Please visit [official HAProxy repository](https://hub.docker.com/_/haproxy/) fo
 ### Example
 
 ```
-docker run -d --rm --name haproxy-docker-logging --rm -p <host port>:<container port> -v /path/to/haproxy/config:/usr/local/etc/haproxy:ro mminks/haproxy-docker-logging
+docker run -d --rm --name haproxy-docker-logging --rm \
+           -p <host port>:<container port> \
+           -v /path/to/haproxy/config:/usr/local/etc/haproxy:ro \
+           mminks/haproxy-docker-logging
 ```
