@@ -23,5 +23,15 @@ Please visit [official HAProxy repository](https://hub.docker.com/_/haproxy/) fo
 docker run -d --rm --name haproxy-docker-logging --rm \
            -p <host port>:<container port> \
            -v /path/to/haproxy/config:/usr/local/etc/haproxy:ro \
+           --name haproxy \
            mminks/haproxy-docker-logging
 ```
+
+#### Reload HAProxy
+
+Reload your HAProxy in case of config changes without restarting the complete container. Send a SIGHUP signal to the container an the HAProxy process will reload gracefully.
+
+```
+docker kill -s SIGHUP haproxy
+```
+
