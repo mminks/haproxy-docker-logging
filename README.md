@@ -1,16 +1,18 @@
 HAProxy with stdout logging (syslogd)
 =====
 
-This image uses the latest Alpine-based HAProxy, adds [tini](https://github.com/krallin/tini), starts syslogd and provides stdout logging.
+This image uses latest Alpine-based HAProxy image, starts rsyslog and provides stdout logging.
 
 ### Configuration
 
 To use stdout logging with your Docker container, please use this snippet in your HAProxy config: 
 
 ```
+global
+    log 127.0.0.1 local0 debug
+
 defaults
     log global
-    log /dev/log local0
 ```
 
 ### Usage
@@ -20,9 +22,11 @@ Please visit [official HAProxy repository](https://hub.docker.com/_/haproxy/) fo
 ### Example
 
 ```
-docker run -d --rm --name haproxy-docker-logging --rm \
+docker run -d \
+           --rm \
            -p <host port>:<container port> \
-           -v /path/to/haproxy/config:/usr/local/etc/haproxy:ro \
+           -p <host port>:<container port> \
+           -v /path/to/haproxy/config:/etc/haproxy.cfg:ro \
            --name haproxy \
            mminks/haproxy-docker-logging
 ```
