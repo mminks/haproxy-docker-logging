@@ -1,4 +1,4 @@
-HAProxy with stdout logging (syslogd)
+HAProxy with stdout logging
 =====
 
 This image uses latest Alpine-based HAProxy image, starts rsyslog and provides stdout logging.
