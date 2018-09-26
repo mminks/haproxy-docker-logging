@@ -15,4 +15,4 @@ COPY rsyslog.conf /etc/rsyslog.d/
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
-CMD [ "-f", "/etc/haproxy.cfg" ]
+CMD [ "-f", "/usr/local/haproxy/haproxy.cfg" ]

@@ -26,7 +26,7 @@ docker run -d \
            --rm \
            -p <host port>:<container port> \
            -p <host port>:<container port> \
-           -v /path/to/haproxy/config:/etc/haproxy.cfg:ro \
+           -v /path/to/haproxy/config:/usr/local/haproxy/haproxy.cfg:ro \
            --name haproxy \
            mminks/haproxy-docker-logging
 ```
