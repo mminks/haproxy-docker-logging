@@ -5,7 +5,7 @@ This image uses latest Alpine-based HAProxy image, starts rsyslog and provides s
 
 ### Configuration
 
-To use stdout logging with your Docker container, please use this snippet in your HAProxy config: 
+To use stdout logging with your Docker container, please use this snippet in your HAProxy config:
 
 ```
 global
@@ -26,7 +26,7 @@ docker run -d \
            --rm \
            -p <host port>:<container port> \
            -p <host port>:<container port> \
-           -v /path/to/haproxy/config:/usr/local/haproxy/haproxy.cfg:ro \
+           -v /path/to/haproxy/config:/usr/local/etc/haproxy/haproxy.cfg:ro \
            --name haproxy \
            mminks/haproxy-docker-logging
 ```
