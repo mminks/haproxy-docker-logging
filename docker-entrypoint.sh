@@ -16,7 +16,7 @@ start_rsyslogd() {
 }
 
 start_lb() {
-  exec haproxy "$@"
+  exec haproxy -W -db "$@"
 }
 
 main "$@"
