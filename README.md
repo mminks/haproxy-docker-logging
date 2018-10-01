@@ -23,6 +23,8 @@ Please visit [official HAProxy repository](https://hub.docker.com/_/haproxy/) fo
 
 ### Example
 
+Mounting a HAProxy configuration file is mandatory. This image doesn't include any configuration itself. See the `-v` section below.
+
 ```
 docker run -d \
            --rm \
