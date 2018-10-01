@@ -39,3 +39,8 @@ Reload your HAProxy in case of config changes without restarting the complete co
 docker kill -s SIGHUP haproxy
 ```
 
+### Contribution
+
+I welcome any kind of contribution. Fork it or contact me. I appreciate any kind of help.
+
+
