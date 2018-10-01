@@ -13,6 +13,6 @@ RUN set -exo pipefail \
 COPY docker-entrypoint.sh /
 COPY rsyslog.conf /etc/rsyslog.d/
 
-ENTRYPOINT [ "/docker-entrypoint.sh" ]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD [ "-f", "/usr/local/etc/haproxy/haproxy.cfg" ]
+CMD ["-f", "/usr/local/etc/haproxy/haproxy.cfg"]
