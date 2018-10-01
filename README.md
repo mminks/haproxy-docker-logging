@@ -27,7 +27,6 @@ Mounting a HAProxy configuration file is mandatory. This image doesn't include a
 
 ```
 docker run -d \
-           --rm \
            -p <host port>:<container port> \
            -p <host port>:<container port> \
            -v /path/to/haproxy/config:/usr/local/etc/haproxy/haproxy.cfg:ro \
