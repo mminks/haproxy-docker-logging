@@ -7,7 +7,7 @@ This image uses latest Alpine-based HAProxy image, starts rsyslog and provides S
 
 ### Supported tags and respective `Dockerfile` links
 
-* [latest](https://github.com/mminks/haproxy-docker-logging/Dockerfile)
+* [latest](https://github.com/mminks/haproxy-docker-logging/blob/master/Dockerfile)
 
 ### Configuration
 
