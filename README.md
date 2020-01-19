@@ -3,7 +3,7 @@ HAProxy with logging to STDOUT
 
 ### About this image
 
-This image uses latest Alpine-based HAProxy image, starts rsyslog and provides STDOUT logging. Access HAProxy logs through `docker logs -f <id or name of your container`.
+This image uses latest Alpine-based HAProxy image, starts rsyslog and provides STDOUT logging. Access HAProxy logs through `docker logs -f <id or name of your container>`.
 
 ### Supported tags and respective `Dockerfile` links
 
