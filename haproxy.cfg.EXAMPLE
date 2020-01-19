@@ -1,0 +1,28 @@
+global
+    maxconn 3000
+    log 127.0.0.1 local0 debug
+
+defaults
+    log global
+    retries 3
+    timeout queue 1m
+    timeout connect 10s
+    timeout client 1m
+    timeout server 1m
+    timeout http-keep-alive 10s
+    timeout check 10s
+
+listen stats
+    bind :9000
+    mode http
+    stats enable
+    stats realm Strictly\ Private
+    stats uri /stats
+    stats auth foo:bar
+
+frontend http
+    bind :8080
+    default_backend backend_default
+
+backend backend_default
+    server local-server 127.0.0.1:9000

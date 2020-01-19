@@ -1,13 +1,17 @@
-HAProxy with stdout logging
+HAProxy with logging to STDOUT
 =====
 
 ### About this image
 
-This image uses latest Alpine-based HAProxy image, starts rsyslog and provides stdout logging.
+This image uses latest Alpine-based HAProxy image, starts rsyslog and provides STDOUT logging. Access HAProxy logs through `docker logs -f <id or name of your container`.
+
+### Supported tags and respective `Dockerfile` links
+
+* [latest](https://github.com/mminks/haproxy-docker-logging/Dockerfile)
 
 ### Configuration
 
-To use stdout logging with your Docker container, please use this snippet in your HAProxy config:
+To use STDOUT logging with your Docker container, please use this snippet in your HAProxy config:
 
 ```
 global
@@ -27,9 +31,8 @@ Mounting a HAProxy configuration file is mandatory. This image doesn't include a
 
 ```
 docker run -d \
-           -p <host port>:<container port> \
-           -p <host port>:<container port> \
-           -v /path/to/haproxy/config:/usr/local/etc/haproxy/haproxy.cfg:ro \
+           -p 8080:9000 \
+           -v $(pwd)/haproxy.cfg.EXAMPLE:/usr/local/etc/haproxy/haproxy.cfg:ro \
            --name haproxy \
            mminks/haproxy-docker-logging
 ```
