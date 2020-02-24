@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  haproxy:
+    image: mminks/haproxy-docker-logging:latest
+    ports:
+    - 8080:9000
+    volumes:
+    - ./haproxy.cfg.EXAMPLE:/usr/local/etc/haproxy/haproxy.cfg:ro
